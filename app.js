@@ -20,6 +20,10 @@ function onReady () {
     toDoList.appendChild(newLi);
     //empty the input
     newToDoText.value = '';
+    // delete button
+    deleteBtn.addEventListener('click', onReady) {
+      newLi.parentNode.removeChild(newLi);
+    }
   });
 }
 
