@@ -1,9 +1,10 @@
 function onReady () {
+  var toDos =[];
   const addToDoForm = document.getElementById('addToDoForm');
   const newToDoText = document.getElementById('newToDoText');
   const toDoList = document.getElementById('toDoList');
 
-  addToDoForm.addEventListener('submit', function(event) ==> {
+  addToDoForm.addEventListener('submit', function(event) {
     event.preventDefault();
 
     let title = newToDoText.value;
@@ -23,19 +24,13 @@ function onReady () {
     toDoList.appendChild(newLi);
     newToDoText.value = "";
 
-
     deleteBtn.addEventListener('click', function(event) {
       //console.log(event)
       //this.parentElement represents the buttons <li> parent
-      toDoList.removeChild(this.parentElement);
+      newLi.removeChild(this.parentElement);
     })
-
-
-if(currentTodo === buttonLiText) {
-  toDos.splice(index, 1);
-    }
-  }};
+  })}
 
 window.onload = function() {
-  onready();
+  onReady();
 };
