@@ -1,33 +1,39 @@
 function onReady () {
+  text toDos = [];
+  let toDoId =
   const addToDoForm = document.getElementById('addToDoForm');
   const newToDoText = document.getElementById('newToDoText');
   const toDoList = document.getElementById('toDoList');
-  addToDoForm.addEventListener('submit', event => {
-    event.preventDefault();
-    // get the text
-    let title = newToDoText.value;
-    // create a new li
-    let newLi = document.createElement('li');
-    // create a new input
-    let checkbox = document.createElement('input');
-    // set the input's type to checkbox
-    checkbox.type = "checkbox";
-    // set the title
-    newLi.textContent = title;
-    // attach the checkbox to the li
-    newLi.appendChild(checkbox);
-    // attach the li to the ul
-    toDoList.appendChild(newLi);
-    //empty the input
-    newToDoText.value = '';
-    // delete button
-    deleteBtn.addEventListener('click', onReady) {
-      newLi.parentNode.removeChild(newLi);
-    }
-  });
-}
 
-window.onload = function() {
-  alert("The window has loaded!");
-  onReady();
-};
+  addToDoForm.addEventListener('submit', function(event) ==> {
+    event.preventDefault();
+
+    let title = newToDoText.value;
+
+    toDos.push(title);
+
+    let newLi = document.createElement('li');
+    let checkbox = document.createElement('input');
+    checkbox.type = "checkbox"; // input <type> checkbox
+
+    newLi.textContent = title;
+    newLi.appendChild(checkbox);
+    newLi.appendChild(deleteBtn);
+    toDoList.appendChild(newLi);
+    newToDoText.value = "";
+
+    let deleteBtn = document.createElement('button');
+    deleteBtn.textContent = "delete";
+
+    deleteBtn.addEventListener('click', function(event) {
+      let buttonLiText = this.parentElement.childNodes[].textContent;
+      //console.log(event)
+      //this.parentElement represents the buttons <li> parent
+      toDoList.removeChild(this.parentElement);
+    })
+
+
+if(currentTodo === buttonLiText) {
+  toDos.splice(index, 1);
+    }
+  }};
