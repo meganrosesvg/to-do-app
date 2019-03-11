@@ -37,3 +37,7 @@ if(currentTodo === buttonLiText) {
   toDos.splice(index, 1);
     }
   }};
+
+window.onload = function() {
+  onready();
+};
