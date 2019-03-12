@@ -3,7 +3,6 @@ body {
 }
 
 header {
-    background: url(hero-image.jpg) center;
     height: 20vh;
     justify-content: left;
     text-align: left;

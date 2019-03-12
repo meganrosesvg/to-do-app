@@ -25,11 +25,9 @@ function onReady () {
     newToDoText.value = "";
 
     deleteBtn.addEventListener('click', function(event) {
-      //console.log(event)
-      //this.parentElement represents the buttons <li> parent
-      newLi.removeChild(this.parentElement);
-    })
-  })}
+      newLi.parentElement();
+    });
+  })};
 
 window.onload = function() {
   onReady();
