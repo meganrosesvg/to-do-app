@@ -25,7 +25,7 @@ function onReady () {
     newToDoText.value = "";
 
     deleteBtn.addEventListener('click', function(event) {
-      newLi.parentElement();
+      newLi.parentElement.removeChild(newLi);
     });
   })};
 
